@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+@page {
+    size: A4;
+    margin: 1cm;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 15mm;
+    box-sizing: border-box;
+    page-break-after: always;
+    background: white;
+}
+
+.page:last-child {
+    page-break-after: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #333;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 3px;
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+    padding: 10px;
+}
+
+.section {
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+}
+
+.section-title {
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+.stat-box {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.stat-name {
+    font-size: 12px;
+    color: #444;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: center;
+}
+
+.mastery-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.mastery-header input {
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.mastery-header input:placeholder-shown {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.mastery-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.mastery-meta div {
+    display: flex;
+    align-items: center;
+}
+
+.mastery-meta label {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.mastery-meta input {
+    width: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.input-title {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.input-hint {
+    font-size: 10px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.print {
+    text-align: center;
+    margin: 20px;
+}
+
+.skill {
+    height: 200px;
+}
+
+.ability {
+    height: 600px;
+}
+
+.player-name {
+    width: 250px;
+}
+
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    
+    .page {
+        padding: 10mm;
+        min-height: 277mm;
+        height: 277mm;
+    }
+    
+    input, textarea {
+        background: none;
+    }
+    
+    textarea {
+        /*min-height: auto;*/
+    }
+
+    ::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    .print {
+        display: none;
+    }
+}
