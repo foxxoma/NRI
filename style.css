@@ -53,6 +53,7 @@ textarea {
     min-height: 160px;
     resize: vertical;
     padding: 10px;
+    font-size: 12px;
 }
 
 .section {
@@ -90,6 +91,9 @@ textarea {
     padding: 5px;
     border-radius: 3px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .stat-name {
@@ -191,6 +195,24 @@ textarea {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.armor {
+    display: flex;
+    gap: 3px;
+}
+
+.armor .stat-box {
+    width: 85px;
+}
+
+.armor-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-bottom: 5px;
+    max-height: 160px;
+    width: min-content;
 }
 
 @media print {
