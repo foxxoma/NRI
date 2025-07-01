@@ -168,18 +168,19 @@
         </div>
     </div>
 
-    <div class="page">
+    <div class="page j-skills">
         <div class="header">
-            <h2>НРИ v0.3 - Мастерства персонажа</h2>
+            <h2>НРИ v0.3 - Навыки персонажа</h2>
             <div>
                 <input type="text" placeholder="Имя персонажа" class="player-name">
             </div>
         </div>
         
         <!-- Пустое мастерство для добавления -->
-        <div class="section">
+        <div class="section j-block">
+            <div class="j-rm-parent-block rm rm-section">Удалить навык</div>
             <div class="mastery-header">
-                <input type="text" placeholder="Название мастерства" style="flex-grow: 1;">
+                <input type="text" placeholder="Название навыка" style="flex-grow: 1;">
             </div>
             <div class="mastery-meta">
                 <div>
@@ -196,21 +197,24 @@
                 </div>
             </div>
             
-            <div style="margin-bottom: 10px;">
-                <div class="input-title">Навыки</div>
-                <textarea class="skill" placeholder="Введите навыки этого мастерства"></textarea>
+            <div style="margin-bottom: 10px;" class="j-block">
+                <div class="input-title jc-sb"><div>Владения</div><div class="j-rm-parent-block rm">Удалить блок</div></div>
+                <textarea class="ownership" placeholder="Введите владения навыка"></textarea>
             </div>
             
-            <div>
-                <div class="input-title">Умения</div>
-                <textarea class="ability" placeholder="Введите умения этого мастерства"></textarea>
+            <div class="j-block">
+                <div class="input-title jc-sb"><div>Умения</div> <div class="j-rm-parent-block rm">Удалить блок</div></div>
+                <textarea class="ability" placeholder="Введите умения навыка"></textarea>
             </div>
         </div>
     </div>
     
     <!-- Кнопка печати -->
     <div class="print">
+        <button onclick="addSkill()" style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 3px; cursor: pointer;">Добавить навык</button>
         <button onclick="window.print()" style="padding: 10px 20px; background: #333; color: white; border: none; border-radius: 3px; cursor: pointer;">Печать листов</button>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>

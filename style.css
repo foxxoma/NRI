@@ -163,7 +163,7 @@ textarea {
     margin: 20px;
 }
 
-.skill {
+.ownership {
     height: 200px;
 }
 
@@ -173,6 +173,24 @@ textarea {
 
 .player-name {
     width: 250px;
+}
+
+.rm {
+    color: red;
+    cursor: pointer;
+    font-size: 10px;
+}
+.rm-section {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.jc-sb {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 @media print {
@@ -200,6 +218,9 @@ textarea {
     }
 
     .print {
+        display: none;
+    }
+    .rm {
         display: none;
     }
 }
